@@ -1,0 +1,111 @@
+{
+  "_ayuda": "Reglas para detectar compras de higiene urbana. Los textos se comparan en minúsculas y sin tildes. 'incluir' y 'excluir' son expresiones regulares. 'codigos' son códigos del catálogo ARCE (classification.id) que se aceptan siempre, sin importar el texto. Ver docs/data/codigos.json para descubrir códigos nuevos.",
+  "categorias": [
+    {
+      "id": "contenedores",
+      "nombre": "Contenedores",
+      "incluir": [
+        "\\bcontenedor(es)?\\b.{0,60}\\b(residuo|basura|reciclab|reciclaj|organico|carga (lateral|trasera|superior|bilateral)|bilateral|soterrad|domiciliari|vereda)",
+        "\\bcontenedor(es)? (de |para )?\\d{3,4} ?(l|lt|lts|litros)\\b",
+        "\\bvolquetas?\\b",
+        "\\bpapeleras?\\b.{0,30}\\b(publica|via|calle|plaza|urbana|metalica|exterior)",
+        "\\bcestos? (de|para) (residuos|basura)",
+        "\\bislas? de reciclaje\\b",
+        "\\bpuntos? limpios?\\b",
+        "\\b(campana|campanas|iglu|iglues)\\b.{0,30}\\b(vidrio|reciclaj)"
+      ],
+      "excluir": [
+        "\\bcontenedor(es)? (maritimo|de laboratorio|de muestras|isotermico|para muestras|hermetico)"
+      ],
+      "codigos": []
+    },
+    {
+      "id": "vehiculos",
+      "nombre": "Camiones y equipos",
+      "incluir": [
+        "\\bcamion(es)?\\b.{0,60}\\b(recolector|compactador|basura|residuo|levanta ?contenedor|carga lateral|carga trasera|porta ?contenedor|volquetero|multibalde|ampliroll|roll ?off|lava ?contenedor)",
+        "\\b(caja|equipo|carroceria|cuerpo) compactador(a)?\\b",
+        "\\bcompactador(a|es)? (de )?(residuos|basura)",
+        "\\brecolector(a|es)? (de )?(residuos|basura)",
+        "\\bbarredoras?\\b",
+        "\\blava ?contenedor(es)?\\b",
+        "\\b(roll ?off|ampliroll|multibalde|multilift|porta ?contenedor(es)?|portacontenedor(es)?)\\b",
+        "\\blevanta ?contenedor(es)?\\b",
+        "\\b(prensa|compactadora|enfardadora) (de |para )?(residuos|carton|reciclab|pet|plastico)"
+      ],
+      "excluir": [
+        "\\b(placa|rodillo|pison|canguro|vibro|vibrador|vibratori)\\b.{0,20}compactador",
+        "\\bcompactador(a)? (de suelo|de placa|vibratori|manual|tipo pison|de tierra|de asfalto)"
+      ],
+      "codigos": []
+    },
+    {
+      "id": "recoleccion",
+      "nombre": "Servicio de recolección y barrido",
+      "incluir": [
+        "\\b(servicio de )?(recoleccion|recogida|levante|retiro|traslado|transporte|recolectar)( y [a-z]+)? (de )?(los )?(residuos|basura|desechos|podas?|escombros|voluminosos)",
+        "\\bservicio de (barrido|limpieza urbana|limpieza de (la )?via publica|higiene urbana)",
+        "\\bbarrido (de calles|manual|mecanic|y limpieza|de veredas)",
+        "\\bhigiene urbana\\b"
+      ],
+      "excluir": [
+        "\\bresiduos (hospitalarios|sanitarios|peligrosos|biologicos|patologicos|contaminados|quimicos|especiales|electronicos|industriales)"
+      ],
+      "codigos": []
+    },
+    {
+      "id": "transferencia",
+      "nombre": "Transferencia de residuos",
+      "incluir": [
+        "\\b(estacion|planta|centro) de transferencia",
+        "\\btransferencia de (los )?residuos"
+      ],
+      "excluir": [],
+      "codigos": []
+    },
+    {
+      "id": "tratamiento",
+      "nombre": "Tratamiento y disposición final",
+      "incluir": [
+        "\\bdisposicion final\\b",
+        "\\brelleno sanitario",
+        "\\bvertedero",
+        "\\bsitio de disposicion",
+        "\\btratamiento (y disposicion )?(final )?(de )?(los )?(residuos|lixiviados?|desechos)",
+        "\\blixiviados?\\b",
+        "\\bplanta de (clasificacion|reciclaje|compostaje|valorizacion|tratamiento de residuos)",
+        "\\bcompostaje\\b",
+        "\\bbiodigestor(es)?\\b",
+        "\\bvalorizacion de residuos"
+      ],
+      "excluir": [],
+      "codigos": []
+    },
+    {
+      "id": "especiales",
+      "nombre": "Residuos especiales / sanitarios",
+      "incluir": [
+        "\\bresiduos (hospitalarios|sanitarios|peligrosos|biologicos|patologicos|contaminados|quimicos|especiales|electronicos|industriales)"
+      ],
+      "excluir": [],
+      "codigos": []
+    },
+    {
+      "id": "otros",
+      "nombre": "Otros con residuos (revisar)",
+      "solo_si_no_hay_otra": true,
+      "incluir": [
+        "\\b(residuos|basura|desechos)\\b"
+      ],
+      "excluir": [
+        "\\b(bolsa|bolsas|guante|guantes|tacho|tachos|papel|desechable|desechables)\\b"
+      ],
+      "codigos": []
+    }
+  ],
+  "alertas": {
+    "activas": true,
+    "categorias": ["contenedores", "vehiculos", "recoleccion", "transferencia", "tratamiento", "especiales"],
+    "maximo_por_corrida": 15
+  }
+}

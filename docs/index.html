@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compras Higiene Urbana UY</title>
+<style>
+:root{
+  --bg:#f6f5f1; --panel:#ffffff; --ink:#1d2421; --muted:#66706b; --line:#e2e0d8;
+  --acc:#1f6f50; --acc-soft:#e3f0ea; --warn:#b4541a; --warn-soft:#fbeadf; --bad:#a3312b;
+  --chip:#efede6; --shadow:0 1px 2px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#141816; --panel:#1c211f; --ink:#e7ebe8; --muted:#9aa49f; --line:#2c3330;
+  --acc:#5cc496; --acc-soft:#1f3329; --warn:#f0a06b; --warn-soft:#3a2a1f; --bad:#ef7f78;
+  --chip:#252b28; --shadow:none;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{padding:20px 24px 0;max-width:1400px;margin:auto}
+h1{font-size:20px;margin:0;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:13px;margin-top:2px}
+nav{display:flex;gap:4px;margin-top:16px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav button{border:0;background:none;padding:10px 14px;font:inherit;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+nav button.on{color:var(--ink);border-color:var(--acc);font-weight:600}
+nav .n{display:inline-block;min-width:20px;padding:0 6px;margin-left:6px;border-radius:10px;background:var(--chip);font-size:12px;color:var(--muted)}
+main{max-width:1400px;margin:auto;padding:16px 24px 60px}
+.filtros{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.filtros input,.filtros select{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
+.filtros input[type=search]{min-width:260px;flex:1;max-width:420px}
+.btn{font:inherit;padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--acc)}
+.cont{margin-left:auto;color:var(--muted);font-size:13px}
+.tarjeta{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{position:sticky;top:0;background:var(--panel);text-align:left;font-weight:600;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap;user-select:none}
+th.num,td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--chip)}
+.desc{max-width:520px}
+.desc b{font-weight:600}
+.peq{color:var(--muted);font-size:12px}
+.chip{display:inline-block;padding:1px 8px;border-radius:10px;background:var(--chip);font-size:11.5px;margin:1px 3px 1px 0;white-space:nowrap}
+.est{font-weight:600;font-size:12px;white-space:nowrap}
+.est.abierto{color:var(--acc)} .est.eval{color:var(--warn)} .est.adj{color:var(--ink)} .est.canc{color:var(--bad)}
+.dias{display:inline-block;padding:2px 8px;border-radius:10px;font-weight:600;font-size:12px;background:var(--acc-soft);color:var(--acc)}
+.dias.pronto{background:var(--warn-soft);color:var(--warn)}
+.vacio{padding:40px;text-align:center;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:14px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.kpi .v{font-size:22px;font-weight:650;font-variant-numeric:tabular-nums}
+.kpi .l{color:var(--muted);font-size:12px}
+.barra{height:6px;border-radius:3px;background:var(--acc);opacity:.8;min-width:2px}
+/* panel de detalle */
+#velo{position:fixed;inset:0;background:rgba(0,0,0,.3);display:none}
+#panel{position:fixed;top:0;right:0;bottom:0;width:min(640px,100%);background:var(--panel);border-left:1px solid var(--line);overflow:auto;transform:translateX(100%);transition:transform .2s;padding:22px 24px 40px}
+body.det #velo{display:block} body.det #panel{transform:none}
+#panel h2{font-size:17px;margin:4px 0 6px}
+#panel h3{font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:22px 0 8px}
+.cerrar{float:right}
+dl{display:grid;grid-template-columns:130px 1fr;gap:6px 12px;margin:12px 0}
+dt{color:var(--muted)} dd{margin:0}
+.linea{border-left:2px solid var(--line);margin-left:6px;padding-left:14px}
+.linea div{position:relative;padding:3px 0}
+.linea div:before{content:"";position:absolute;left:-19px;top:9px;width:8px;height:8px;border-radius:50%;background:var(--acc)}
+.mio{background:var(--acc-soft);border-radius:10px;padding:12px;margin-top:14px}
+.mio select,.mio textarea{font:inherit;width:100%;padding:7px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink)}
+.mio textarea{margin-top:8px;min-height:70px}
+a{color:var(--acc)}
+.links a{display:inline-block;margin:0 12px 6px 0}
+@media (max-width:700px){header,main{padding-left:16px;padding-right:16px} .filtros input[type=search]{min-width:0;max-width:none;flex:1 1 100%} .filtros select{flex:1 1 45%} .desc{max-width:none} .ocm{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Compras estatales · Higiene urbana · Uruguay</h1>
+  <div class="sub" id="sub">Cargando datos…</div>
+  <nav id="tabs"></nav>
+</header>
+<main>
+  <div class="filtros" id="filtros">
+    <input type="search" id="fTexto" placeholder="Buscar: organismo, objeto, ítem, proveedor…">
+    <select id="fRubro"><option value="">Todos los rubros</option></select>
+    <select id="fOrg"><option value="">Todos los organismos</option></select>
+    <select id="fAnio"><option value="">Todos los años</option></select>
+    <button class="btn" id="bCsv" title="Descargar lo que se ve, para abrir en Excel">Descargar Excel (CSV)</button>
+    <span class="cont" id="cont"></span>
+  </div>
+  <div id="vista"></div>
+</main>
+<div id="velo"></div>
+<aside id="panel"></aside>
+
+<script>
+const TABS = [
+  {id:"abiertos", t:"Llamados abiertos"},
+  {id:"todas", t:"Todas las compras"},
+  {id:"adj", t:"Adjudicaciones y precios"},
+  {id:"prov", t:"Proveedores"},
+  {id:"org", t:"Organismos"},
+  {id:"mio", t:"Mi seguimiento"},
+];
+const ESTADOS_MIOS = ["", "Para analizar", "Cotizando", "Presentada", "Ganada", "Perdida", "Descartada"];
+let COMPRAS = [], META = {}, CATS = {}, tab = "abiertos", orden = {}, filas = [];
+
+// ---------- utilidades
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm = s => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const TZ = "America/Montevideo";
+const fFecha = iso => iso ? new Date(iso).toLocaleDateString("es-UY", {timeZone:TZ, day:"2-digit", month:"2-digit", year:"numeric"}) : "–";
+const fFH = iso => iso ? new Date(iso).toLocaleString("es-UY", {timeZone:TZ, day:"2-digit", month:"2-digit", year:"numeric", hour:"2-digit", minute:"2-digit"}) : "–";
+const fNum = (n, d=0) => n == null ? "–" : Number(n).toLocaleString("es-UY", {maximumFractionDigits:d, minimumFractionDigits:d});
+const fMon = (m, v) => v == null ? "–" : `${m || ""} ${fNum(v)}`;
+const ahora = Date.now();
+function leerMio(){ try { return JSON.parse(localStorage.getItem("seguimiento") || "{}"); } catch(e){ return {}; } }
+function guardarMio(o){ try { localStorage.setItem("seguimiento", JSON.stringify(o)); } catch(e){} }
+let MIO = leerMio();
+
+function estado(c){
+  if (["cancelled","unsuccessful","withdrawn"].includes(c.estado)) return ["Cancelado","canc"];
+  if (c.adjudicaciones.length || c.estado === "awarded" || c.estado === "complete") return ["Adjudicado","adj"];
+  if (c.apertura && new Date(c.apertura) > ahora) return ["Abierto","abierto"];
+  return ["En evaluación","eval"];
+}
+function totales(c){
+  const t = {};
+  for (const a of c.adjudicaciones) for (const it of a.items) if (it.total != null) t[it.moneda||"?"] = (t[it.moneda||"?"]||0) + it.total;
+  return t;
+}
+const chips = c => c.categorias.map(k => `<span class="chip">${esc(CATS[k]||k)}</span>`).join("");
+const anio = iso => iso ? iso.slice(0,4) : "";
+
+// ---------- carga
+Promise.all([
+  fetch("data/compras.json", {cache:"no-cache"}).then(r => r.ok ? r.json() : []),
+  fetch("data/meta.json", {cache:"no-cache"}).then(r => r.ok ? r.json() : {}),
+]).then(([c, m]) => {
+  COMPRAS = c; META = m;
+  (m.categorias||[]).forEach(x => CATS[x.id] = x.nombre);
+  for (const x of COMPRAS) x._txt = norm([x.id, x.organismo, x.titulo, x.descripcion, x.tipo,
+    ...x.items.map(i => i.desc), ...x.adjudicaciones.map(a => a.proveedor)].join(" "));
+  $("#sub").textContent = `${fNum(COMPRAS.length)} compras del rubro · actualizado ${fFH(m.actualizado)} · fuente: ARCE (datos abiertos OCDS)`;
+  armarFiltros(); armarTabs(); render();
+}).catch(e => { $("#sub").textContent = "No se pudieron cargar los datos: " + e; });
+
+function armarFiltros(){
+  for (const [k,v] of Object.entries(CATS)) $("#fRubro").insertAdjacentHTML("beforeend", `<option value="${esc(k)}">${esc(v)}</option>`);
+  const orgs = [...new Set(COMPRAS.map(c => c.organismo).filter(Boolean))].sort((a,b) => a.localeCompare(b,"es"));
+  for (const o of orgs) $("#fOrg").insertAdjacentHTML("beforeend", `<option>${esc(o)}</option>`);
+  const anios = [...new Set(COMPRAS.map(c => anio(c.publicado)).filter(Boolean))].sort().reverse();
+  for (const a of anios) $("#fAnio").insertAdjacentHTML("beforeend", `<option>${a}</option>`);
+  ["#fTexto","#fRubro","#fOrg","#fAnio"].forEach(s => $(s).addEventListener("input", render));
+  $("#bCsv").onclick = descargarCsv;
+}
+function armarTabs(){
+  const n = {abiertos: COMPRAS.filter(c => estado(c)[1]==="abierto").length, mio: Object.values(MIO).filter(v => v.e).length};
+  $("#tabs").innerHTML = TABS.map(t => `<button data-t="${t.id}" class="${t.id===tab?"on":""}">${t.t}${n[t.id]!=null?`<span class="n">${n[t.id]}</span>`:""}</button>`).join("");
+  $("#tabs").querySelectorAll("button").forEach(b => b.onclick = () => { tab = b.dataset.t; armarTabs(); render(); });
+}
+function filtradas(){
+  const q = norm($("#fTexto").value).split(" ").filter(Boolean), r = $("#fRubro").value, o = $("#fOrg").value, a = $("#fAnio").value;
+  return COMPRAS.filter(c => (!r || c.categorias.includes(r)) && (!o || c.organismo === o) && (!a || anio(c.publicado) === a)
+    && q.every(w => c._txt.includes(w)));
+}
+
+// ---------- tablas genéricas
+function tabla(cols, datos, clave){
+  orden[tab] = orden[tab] || clave;
+  const [k, dir] = orden[tab];
+  const col = cols.find(c => c.k === k) || cols[0];
+  const val = col.v || (x => x[col.k]);
+  datos = [...datos].sort((x, y) => { const a = val(x), b = val(y);
+    return (a == null) - (b == null) || (a < b ? -1 : a > b ? 1 : 0) * dir; });
+  filas = {cols, datos};
+  $("#cont").textContent = `${fNum(datos.length)} filas`;
+  if (!datos.length) return `<div class="tarjeta"><div class="vacio">No hay resultados con estos filtros.</div></div>`;
+  const vis = datos.slice(0, 1500);
+  return `<div class="tarjeta"><table><thead><tr>${cols.map(c => `<th data-k="${c.k}" class="${c.cls||""}">${c.t}${c.k===k?(dir>0?" ↑":" ↓"):""}</th>`).join("")}</tr></thead>
+    <tbody>${vis.map((x,i) => `<tr data-i="${i}">${cols.map(c => `<td class="${c.cls||""}">${c.h ? c.h(x) : esc((c.v || (y => y[c.k]))(x))}</td>`).join("")}</tr>`).join("")}</tbody></table>
+    ${datos.length > vis.length ? `<div class="vacio">Se muestran 1.500 de ${fNum(datos.length)}. Afiná los filtros o descargá el CSV.</div>` : ""}</div>`;
+}
+function conectar(abrir){
+  $("#vista").querySelectorAll("th").forEach(th => th.onclick = () => {
+    const [k, d] = orden[tab]; orden[tab] = [th.dataset.k, th.dataset.k === k ? -d : -1]; render(); });
+  if (abrir) $("#vista").querySelectorAll("tbody tr").forEach(tr => tr.onclick = () => abrir(filas.datos[+tr.dataset.i]));
+}
+
+// ---------- vistas
+const colCompra = [
+  {k:"publicado", t:"Publicado", h:c => fFecha(c.publicado)},
+  {k:"organismo", t:"Organismo"},
+  {k:"desc", t:"Objeto", cls:"desc", v:c => c.descripcion, h:c => `<b>${esc(c.descripcion || c.titulo)}</b><div class="peq">${esc(c.titulo)} · ${esc(c.tipo)}</div>${chips(c)}`},
+];
+function render(){
+  const v = $("#vista"), C = filtradas();
+  $("#filtros").style.display = "";
+  if (tab === "abiertos"){
+    const d = C.filter(c => estado(c)[1] === "abierto");
+    v.innerHTML = tabla([
+      {k:"apertura", t:"Apertura", h:c => { const dd = Math.ceil((new Date(c.apertura)-ahora)/864e5);
+        return `${fFH(c.apertura)}<br><span class="dias ${dd<=5?"pronto":""}">${dd} día${dd===1?"":"s"}</span>`; }},
+      ...colCompra,
+      {k:"mio", t:"Mi estado", v:c => (MIO[c.id]||{}).e || "", h:c => esc((MIO[c.id]||{}).e || "")},
+    ], d, ["apertura", 1]);
+    conectar(detalle);
+  } else if (tab === "todas" || tab === "mio"){
+    const d = tab === "mio" ? C.filter(c => (MIO[c.id]||{}).e) : C;
+    v.innerHTML = tabla([
+      ...colCompra,
+      {k:"estado", t:"Estado", v:c => estado(c)[0], h:c => `<span class="est ${estado(c)[1]}">${estado(c)[0]}</span>${tab==="mio"?`<div class="peq">Mío: ${esc(MIO[c.id].e)}</div>`:""}`},
+      {k:"monto", t:"Adjudicado", cls:"num", v:c => Object.values(totales(c))[0], h:c => Object.entries(totales(c)).map(([m,x]) => fMon(m,x)).join("<br>")},
+    ], d, ["publicado", -1]);
+    if (tab === "mio" && !d.length) v.innerHTML = `<div class="tarjeta"><div class="vacio">Todavía no marcaste compras. Abrí cualquier compra y elegí un estado en “Mi seguimiento”.<br><span class="peq">Se guarda en este navegador.</span></div></div>`;
+    conectar(detalle);
+  } else if (tab === "adj"){
+    const d = [];
+    for (const c of C) for (const a of c.adjudicaciones) for (const it of a.items)
+      d.push({c, fecha:a.fecha, organismo:c.organismo, proveedor:a.proveedor, item:it.desc, cod:it.cod, cant:it.cant, unidad:it.unidad, precio:it.precio, moneda:it.moneda, total:it.total, cat:(it.cat||[]).map(k=>CATS[k]||k).join(", ")});
+    v.innerHTML = tabla([
+      {k:"fecha", t:"Fecha", h:x => fFecha(x.fecha)},
+      {k:"organismo", t:"Organismo"},
+      {k:"proveedor", t:"Proveedor", h:x => `<b>${esc(x.proveedor)}</b>`},
+      {k:"item", t:"Ítem", cls:"desc", h:x => `${esc(x.item)}<div class="peq">${x.cat ? esc(x.cat) : "ítem fuera del rubro"} · cód. ${esc(x.cod)}</div>`},
+      {k:"cant", t:"Cant.", cls:"num", h:x => `${fNum(x.cant, 2).replace(/,00$/,"")} <span class="peq">${esc(x.unidad||"")}</span>`},
+      {k:"precio", t:"Precio unit.", cls:"num", h:x => fMon(x.moneda, x.precio)},
+      {k:"total", t:"Total", cls:"num", h:x => fMon(x.moneda, x.total)},
+    ], d, ["fecha", -1]);
+    conectar(x => detalle(x.c));
+  } else if (tab === "prov" || tab === "org"){
+    const agr = {};
+    for (const c of C){
+      if (tab === "org"){
+        const g = agr[c.organismo] ||= {nombre:c.organismo, n:0, adj:0, UYU:0, USD:0, otras:0, cats:{}};
+        g.n++; if (c.adjudicaciones.length) g.adj++;
+        for (const [m,x] of Object.entries(totales(c))) (m==="UYU"||m==="USD") ? g[m]+=x : g.otras+=x;
+        c.categorias.forEach(k => g.cats[k] = (g.cats[k]||0)+1);
+      } else for (const a of c.adjudicaciones){
+        const g = agr[a.proveedor] ||= {nombre:a.proveedor, n:0, orgs:new Set(), UYU:0, USD:0, otras:0, cats:{}, ultima:""};
+        g.n++; g.orgs.add(c.organismo); if ((a.fecha||"") > g.ultima) g.ultima = a.fecha;
+        for (const it of a.items) if (it.total != null) (it.moneda==="UYU"||it.moneda==="USD") ? g[it.moneda]+=it.total : g.otras+=it.total;
+        c.categorias.forEach(k => g.cats[k] = (g.cats[k]||0)+1);
+      }
+    }
+    const d = Object.values(agr); const max = Math.max(1, ...d.map(x => x.n));
+    const topCats = g => Object.entries(g.cats).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([k]) => `<span class="chip">${esc(CATS[k]||k)}</span>`).join("");
+    const kp = tab === "prov"
+      ? [[d.length,"proveedores con adjudicaciones"],[d.reduce((s,x)=>s+x.n,0),"adjudicaciones"],[fMon("USD", d.reduce((s,x)=>s+x.USD,0)),"total en USD"],[fMon("UYU", d.reduce((s,x)=>s+x.UYU,0)),"total en pesos"]]
+      : [[d.length,"organismos compradores"],[C.length,"compras del rubro"],[fMon("USD", d.reduce((s,x)=>s+x.USD,0)),"adjudicado en USD"],[fMon("UYU", d.reduce((s,x)=>s+x.UYU,0)),"adjudicado en pesos"]];
+    v.innerHTML = `<div class="kpis">${kp.map(([a,b]) => `<div class="kpi"><div class="v">${typeof a==="number"?fNum(a):a}</div><div class="l">${b}</div></div>`).join("")}</div>` + tabla([
+      {k:"nombre", t: tab==="prov" ? "Proveedor" : "Organismo", h:x => `<b>${esc(x.nombre)}</b><div>${topCats(x)}</div>`},
+      {k:"n", t: tab==="prov" ? "Adjudicaciones" : "Compras", cls:"num", h:x => `${fNum(x.n)}<div class="barra" style="width:${Math.round(80*x.n/max)}px;margin-left:auto"></div>`},
+      tab==="prov" ? {k:"orgs", t:"Organismos clientes", cls:"num", v:x => x.orgs.size} : {k:"adj", t:"Con adjudicación", cls:"num"},
+      {k:"USD", t:"Total USD", cls:"num", h:x => x.USD ? fNum(x.USD) : "–"},
+      {k:"UYU", t:"Total $", cls:"num", h:x => x.UYU ? fNum(x.UYU) : "–"},
+      ...(tab==="prov" ? [{k:"ultima", t:"Última", h:x => fFecha(x.ultima)}] : []),
+    ], d, ["n", -1]);
+    conectar(x => { $("#fTexto").value = x.nombre; tab = "todas"; armarTabs(); render(); });
+  }
+}
+
+// ---------- detalle
+function detalle(c){
+  const [e, cls] = estado(c), mio = MIO[c.id] || {};
+  const TIP = {tender:"Llamado publicado", tenderUpdate:"Aclaración", tenderAmendment:"Ajuste del llamado", tenderCancellation:"Cancelación", award:"Adjudicación", awardUpdate:"Ajuste de adjudicación"};
+  $("#panel").innerHTML = `
+    <button class="btn cerrar" onclick="cerrar()">Cerrar</button>
+    <div class="peq">Compra ${esc(c.id)} · ${esc(c.titulo)}</div>
+    <h2>${esc(c.descripcion || c.titulo)}</h2>
+    <div>${chips(c)} <span class="est ${cls}">${e}</span></div>
+    <dl>
+      <dt>Organismo</dt><dd>${esc(c.organismo)}</dd>
+      <dt>Procedimiento</dt><dd>${esc(c.tipo || "–")}</dd>
+      <dt>Publicado</dt><dd>${fFH(c.publicado)}</dd>
+      <dt>Apertura</dt><dd>${fFH(c.apertura)}</dd>
+    </dl>
+    <div class="links"><a href="${esc(c.url)}" target="_blank" rel="noopener">Ver en ARCE ↗</a>${c.documentos.map(d => `<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.titulo)} ↗</a>`).join("")}</div>
+    <div class="mio"><b>Mi seguimiento</b>
+      <select id="mE">${ESTADOS_MIOS.map(s => `<option ${s===mio.e?"selected":""} value="${s}">${s || "— sin marcar —"}</option>`).join("")}</select>
+      <textarea id="mN" placeholder="Notas: contacto, competidores, precio cotizado…">${esc(mio.n || "")}</textarea>
+      <div class="peq">Se guarda solo en este navegador.</div></div>
+    <h3>Ítems del llamado</h3>
+    ${c.items.length ? `<table><tbody>${c.items.map(i => `<tr><td>${esc(i.desc)}<div class="peq">cód. ${esc(i.cod)}</div></td><td class="num">${fNum(i.cant,2).replace(/,00$/,"")} ${esc(i.unidad||"")}</td></tr>`).join("")}</tbody></table>` : `<div class="peq">Sin ítems publicados (puede ser una compra sin llamado).</div>`}
+    <h3>Adjudicaciones</h3>
+    ${c.adjudicaciones.length ? c.adjudicaciones.map(a => `<div style="margin-bottom:12px"><b>${esc(a.proveedor)}</b> <span class="peq">${fFecha(a.fecha)} · RUT/ID ${esc(a.proveedor_id)}</span>
+      <table><tbody>${a.items.map(i => `<tr><td>${esc(i.desc)}</td><td class="num">${fNum(i.cant,2).replace(/,00$/,"")}</td><td class="num">${fMon(i.moneda,i.precio)}</td><td class="num"><b>${fMon(i.moneda,i.total)}</b></td></tr>`).join("")}</tbody></table></div>`).join("") : `<div class="peq">Todavía no hay adjudicación publicada.</div>`}
+    <h3>Historial</h3>
+    <div class="linea">${c.eventos.map(ev => `<div>${fFH(ev.fecha)} — ${TIP[ev.tipo]||esc(ev.tipo)} <a class="peq" href="http://www.comprasestatales.gub.uy/ocds/release/${esc(ev.release)}" target="_blank" rel="noopener">datos</a></div>`).join("")}</div>`;
+  document.body.classList.add("det");
+  const g = () => { MIO[c.id] = {e:$("#mE").value, n:$("#mN").value}; if (!MIO[c.id].e && !MIO[c.id].n) delete MIO[c.id]; guardarMio(MIO); armarTabs(); };
+  $("#mE").onchange = () => { g(); render(); }; $("#mN").oninput = g;
+}
+function cerrar(){ document.body.classList.remove("det"); }
+$("#velo").onclick = cerrar;
+document.addEventListener("keydown", e => { if (e.key === "Escape") cerrar(); });
+
+// ---------- CSV para Excel (separador ; y BOM para tildes)
+function descargarCsv(){
+  if (!filas.datos || !filas.datos.length) return;
+  const cols = filas.cols, val = c => c.v || (x => x[c.k]);
+  const txt = x => { if (x instanceof Set) x = x.size; if (x == null) return ""; if (typeof x === "number") return String(x).replace(".", ",");
+    return '"' + String(x).replace(/"/g,'""') + '"'; };
+  const extra = tab === "abiertos" || tab === "todas" || tab === "mio"
+    ? [["ID compra", x => x.id], ["Link ARCE", x => x.url], ["Rubros", x => x.categorias.map(k=>CATS[k]||k).join(", ")]]
+    : tab === "adj" ? [["Moneda", x => x.moneda], ["ID compra", x => x.c.id], ["Link ARCE", x => x.c.url]] : [];
+  const cab = [...cols.map(c => c.t), ...extra.map(e => e[0])];
+  const lin = filas.datos.map(x => [...cols.map(c => txt(val(c)(x))), ...extra.map(e => txt(e[1](x)))].join(";"));
+  const blob = new Blob(["﻿" + [cab.join(";"), ...lin].join("\r\n")], {type:"text/csv;charset=utf-8"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob);
+  a.download = `compras-${tab}-${new Date().toISOString().slice(0,10)}.csv`; a.click();
+}
+</script>
+</body>
+</html>

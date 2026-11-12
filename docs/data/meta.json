@@ -1,0 +1,35 @@
+{
+ "actualizado": null,
+ "compras": 0,
+ "nota": "Todavía sin datos: corré la carga histórica.",
+ "categorias": [
+  {
+   "id": "contenedores",
+   "nombre": "Contenedores"
+  },
+  {
+   "id": "vehiculos",
+   "nombre": "Camiones y equipos"
+  },
+  {
+   "id": "recoleccion",
+   "nombre": "Servicio de recolección y barrido"
+  },
+  {
+   "id": "transferencia",
+   "nombre": "Transferencia de residuos"
+  },
+  {
+   "id": "tratamiento",
+   "nombre": "Tratamiento y disposición final"
+  },
+  {
+   "id": "especiales",
+   "nombre": "Residuos especiales / sanitarios"
+  },
+  {
+   "id": "otros",
+   "nombre": "Otros con residuos (revisar)"
+  }
+ ]
+}
