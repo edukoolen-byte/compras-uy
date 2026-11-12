@@ -1,1 +1,859 @@
-[]
+[
+ {
+  "cod": "936",
+  "desc": "RECOLECCION DE RESIDUOS",
+  "veces": 1865,
+  "cat": [
+   "recoleccion"
+  ]
+ },
+ {
+  "cod": "0",
+  "desc": "LEVANTE DE VOLUMINOSOS",
+  "veces": 1558,
+  "cat": [
+   "contenedores",
+   "especiales",
+   "otros",
+   "recoleccion",
+   "transferencia",
+   "tratamiento",
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "74594",
+  "desc": "RECOLECCION DE RESIDUOS SANITARIOS PELIGROSOS",
+  "veces": 1420,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "67250",
+  "desc": "PALA PARA RESIDUOS",
+  "veces": 1115,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "63362",
+  "desc": "CONTENEDOR DE RESIDUOS HOSPITALARIOS",
+  "veces": 746,
+  "cat": [
+   "contenedores",
+   "especiales"
+  ]
+ },
+ {
+  "cod": "14667",
+  "desc": "RECIPIENTE CON TAPA PARA RESIDUOS",
+  "veces": 736,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "8808",
+  "desc": "ARRENDAMIENTO DE VOLQUETA",
+  "veces": 723,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "7197",
+  "desc": "PAPELERA METALICA",
+  "veces": 462,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "11699",
+  "desc": "BOLSA DE POLIETILENO PARA RESIDUOS HOSPITALARIOS CON PICTOGRAMA",
+  "veces": 385,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "11847",
+  "desc": "RECOLECCION DE RESIDUOS HOSPITALARIOS",
+  "veces": 369,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "8202",
+  "desc": "CONTENEDOR DE RESIDUOS DOMICILIARIOS DE 4 RUEDAS",
+  "veces": 308,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "8201",
+  "desc": "CONTENEDOR PLASTICO DE RESIDUOS DOMICILIARIOS DE 2 RUEDAS",
+  "veces": 296,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "77738",
+  "desc": "GESTION DE RESIDUOS SOLIDOS INDUSTRIALES Y ASIMILABLES",
+  "veces": 239,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "39424",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE MEDICAMENTOS",
+  "veces": 186,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "67278",
+  "desc": "RECIPIENTE PARA RESIDUOS",
+  "veces": 142,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "75328",
+  "desc": "GESTION DE RESIDUOS SANITARIOS PELIGROSOS",
+  "veces": 140,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "67377",
+  "desc": "TRANSPORTE DE RESIDUOS",
+  "veces": 136,
+  "cat": [
+   "recoleccion"
+  ]
+ },
+ {
+  "cod": "43195",
+  "desc": "SERVICIO DE LIMPIEZA DE PUERTOS Y RECOLECCION DE RESIDUOS",
+  "veces": 124,
+  "cat": [
+   "recoleccion"
+  ]
+ },
+ {
+  "cod": "65175",
+  "desc": "GESTION DE RESIDUOS INDUSTRIALES",
+  "veces": 122,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "68287",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE PRODUCTOS QUIMICOS",
+  "veces": 104,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "69894",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE EQUIPOS ELECTRONICOS",
+  "veces": 103,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "69893",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE EQUIPOS INFORMATICOS",
+  "veces": 99,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "12701",
+  "desc": "VOLQUETA",
+  "veces": 91,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "5705",
+  "desc": "CAMION COMPACTADOR DE RESIDUOS DE CARGA TRASERA",
+  "veces": 86,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "75158",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE MATERIAL MEDICO QUIRURGICO Y/O INSUMOS MEDICOS",
+  "veces": 65,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "31839",
+  "desc": "CONTENEDOR DE BIOSEGURIDAD PARA RESIDUOS",
+  "veces": 62,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "75752",
+  "desc": "DISPOSICION FINAL DE RESIDUOS NO DOMICILARIOS",
+  "veces": 58,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "76525",
+  "desc": "GESTION DE RESIDUOS SOLIDOS URBANOS",
+  "veces": 52,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "100625",
+  "desc": "RECIPIENTE PARA DESCARTE DE RESIDUOS PELIGROSOS",
+  "veces": 51,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "77541",
+  "desc": "CONTENEDOR PLASTICO PARA RESIDUOS - NORMA UNIT 1239:2017",
+  "veces": 47,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "11697",
+  "desc": "PAPELERA PLASTICA PARA RESIDUOS EN LA VIA PUBLICA",
+  "veces": 31,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "8481",
+  "desc": "RUEDA PARA CONTENEDOR DE RESIDUOS",
+  "veces": 30,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "79662",
+  "desc": "ANALISIS DE MUESTRAS DE ORIGEN ANIMAL PARA PROGRAMA NACIONAL DE RESIDUOS BIOLOGICOS",
+  "veces": 28,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "75756",
+  "desc": "CONTENEDOR DE RESIDUOS VOLCADOR",
+  "veces": 27,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "78207",
+  "desc": "CONTENEDOR DE RESIDUOS DE ACERO INOXIDABLE CON TAPA Y PEDAL",
+  "veces": 26,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "9056",
+  "desc": "LEVANTE DE VOLQUETA",
+  "veces": 25,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "74023",
+  "desc": "OPERACION DE PLANTA DE TRATAMIENTO DE RESIDUOS",
+  "veces": 24,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "935",
+  "desc": "SERVICIO DE BARRIDO",
+  "veces": 22,
+  "cat": [
+   "recoleccion"
+  ]
+ },
+ {
+  "cod": "79787",
+  "desc": "SERVICIO DE RETIRO Y DISPOSICION FINAL DE MOBILIARIO",
+  "veces": 22,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "22536",
+  "desc": "CEPILLO DE BARREDORA",
+  "veces": 19,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "75641",
+  "desc": "ANALISIS DE RESIDUOS DE PLAGUICIDAS",
+  "veces": 17,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "75522",
+  "desc": "TAPA PARA CONTENEDOR DE RESIDUOS",
+  "veces": 17,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "13759",
+  "desc": "CONTENEDOR METALICO PARA RESIDUOS",
+  "veces": 17,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "76682",
+  "desc": "MEZCLA PARA EXTRACCION PARA ANALISIS DE RESIDUOS DE PLAGUICIDAS",
+  "veces": 16,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "12500",
+  "desc": "TRITURADORA DE RESIDUOS VEGETALES Y FORESTALES",
+  "veces": 15,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "77547",
+  "desc": "KIT DE SCREENING DE RESIDUOS DE ANTIBIOTICOS EN LECHE",
+  "veces": 14,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "44129",
+  "desc": "CONSTRUCCION DE RECINTO PARA RESIDUOS",
+  "veces": 14,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "78800",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE VEHICULOS",
+  "veces": 13,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "100461",
+  "desc": "CONTENEDOR DE RESIDUOS EN PLACAS DE PLASTICO RECICLADO",
+  "veces": 12,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "69193",
+  "desc": "CLASIFICACION Y ANALISIS DE RESIDUOS",
+  "veces": 12,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "71487",
+  "desc": "TRITURADO DE RESIDUOS",
+  "veces": 12,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "68967",
+  "desc": "BARREDORA SOPLADORA DE ARRASTRE",
+  "veces": 12,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "29477",
+  "desc": "EQUIPO DE TRATAMIENTO DE RESIDUOS",
+  "veces": 11,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "67215",
+  "desc": "MANTENIMENTO DE TRITURADORA DE RESIDUOS SANITARIOS",
+  "veces": 11,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "77048",
+  "desc": "GESTION DE RESIDUOS HIGIENICOS FEMENINOS",
+  "veces": 11,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "71364",
+  "desc": "PIEZA DE AGARRE PARA CONTENEDOR DE RESIDUOS",
+  "veces": 10,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "73921",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE MERCADERIAS EN INFRACCION ADUANERA",
+  "veces": 10,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "69215",
+  "desc": "CONTENEDOR METALICO DE RESIDUOS DOMICILIARIOS DE 4 RUEDAS",
+  "veces": 10,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "11743",
+  "desc": "REPARACION DE PUNTERO DE BARRA LARGA DE DIRECCION DE CAMION RECOLECTOR",
+  "veces": 9,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "12247",
+  "desc": "SISTEMA DE RECOLECCION DE RESIDUOS URBANOS",
+  "veces": 8,
+  "cat": [
+   "recoleccion"
+  ]
+ },
+ {
+  "cod": "74315",
+  "desc": "BOMBA TRITURADORA DE RESIDUOS SANITARIOS",
+  "veces": 7,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
+  "cod": "5910",
+  "desc": "BARREDORA MECANICA AUTOPROPULSADA DE ARRASTRE",
+  "veces": 7,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "74636",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE VESTIMENTA",
+  "veces": 7,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "73488",
+  "desc": "CONSTRUCCION DE RELLENO SANITARIO",
+  "veces": 7,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "65735",
+  "desc": "TRITURADORA DE RESIDUOS",
+  "veces": 7,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "69410",
+  "desc": "MANTENIMIENTO DE EQUIPO PARA TRATAMIENTO DE RESIDUOS",
+  "veces": 7,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "5507",
+  "desc": "BARREDORA MECANICA DE CALLE PARA CAMION",
+  "veces": 6,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "5706",
+  "desc": "CAMION COMPACTADOR DE RESIDUOS DE CARGA LATERAL",
+  "veces": 6,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "70186",
+  "desc": "CAMION LAVACONTENEDOR",
+  "veces": 6,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "102476",
+  "desc": "ACONDICIONAMIENTO DE VOLQUETA",
+  "veces": 5,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "75751",
+  "desc": "DISPOSICION FINAL DE RESIDUO SANITARIO PELIGROSO",
+  "veces": 5,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "121740",
+  "desc": "PLATAFORMA DE GESTION INTELIGENTE DE RESIDUOS",
+  "veces": 5,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "8798",
+  "desc": "BARREDORA MANUAL",
+  "veces": 5,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "5509",
+  "desc": "CAJA COMPACTADORA DE RESIDUOS",
+  "veces": 5,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "121739",
+  "desc": "EJE PARA CONTENEDOR DE RESIDUOS",
+  "veces": 4,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "69637",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE NEUMATICOS",
+  "veces": 4,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "5329",
+  "desc": "PLANTA DE TRATAMIENTO DE RESIDUOS",
+  "veces": 4,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "9330",
+  "desc": "MAQUINA COMPACTADORA DE RESIDUOS",
+  "veces": 4,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "9560",
+  "desc": "CONSTRUCCION DE COMPUERTA PARA VERTEDERO",
+  "veces": 4,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "72521",
+  "desc": "BIODIGESTOR (TANQUE)",
+  "veces": 3,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "75561",
+  "desc": "INSTALACION DE MAQUINA COMPACTADORA DE RESIDUOS",
+  "veces": 3,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "78894",
+  "desc": "GESTION DE PLANTA DE COMPOSTAJE",
+  "veces": 3,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "72069",
+  "desc": "RESPUESTO Y/O ACCESORIO PARA EQUIPO DE TRATAMIENTO DE RESIDUOS HOSPITALARIOS",
+  "veces": 3,
+  "cat": [
+   "especiales",
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "44214",
+  "desc": "INSTALACION DE SISTEMA DE TRATAMIENTO DE RESIDUOS HOSPITALARIOS",
+  "veces": 3,
+  "cat": [
+   "especiales",
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "67938",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE COLCHONES",
+  "veces": 3,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "100181",
+  "desc": "PRESA CENTRAL Y VERTEDERO UTE",
+  "veces": 2,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "103194",
+  "desc": "PINZA PRENSA DE PLASTICO",
+  "veces": 2,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "43456",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE PAPELES CONTAMINADOS",
+  "veces": 2,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "79785",
+  "desc": "MANTENIMIENTO DE HORNO INCINERADOR DE RESIDUOS",
+  "veces": 2,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "80100",
+  "desc": "ESTACION DE DESECHOS PARA BIOTERIO",
+  "veces": 2,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "70955",
+  "desc": "REACTIVO PARA LA DETERMINACION DE RESIDUOS DE CLORANFENICOL",
+  "veces": 2,
+  "cat": [
+   "otros"
+  ]
+ },
+ {
+  "cod": "67939",
+  "desc": "RECIPIENTE PARA CARRO MANUAL DE RECOLECCION DE RESIDUOS",
+  "veces": 2,
+  "cat": [
+   "recoleccion"
+  ]
+ },
+ {
+  "cod": "70456",
+  "desc": "REFACCION DE PLANTA DE TRATAMIENTO DE RESIDUOS",
+  "veces": 2,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "13263",
+  "desc": "SERVICIO DE EXTINCION DE FUEGO EN VOLQUETA",
+  "veces": 2,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "13760",
+  "desc": "ENGRANAJE DE BANDA TRANSPORTADORA PARA BARREDORA",
+  "veces": 2,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "47506",
+  "desc": "KIT PARA RECOLECCION DE RESIDUOS DE DISPAROS POR ARMAS DE FUEGO",
+  "veces": 2,
+  "cat": [
+   "recoleccion"
+  ]
+ },
+ {
+  "cod": "68853",
+  "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE RADIOGRAFIAS",
+  "veces": 1,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
+  "cod": "119607",
+  "desc": "REPARACION DE BARREDORA MANUAL",
+  "veces": 1,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "122791",
+  "desc": "ARRENDAMIENTO DE BARREDORA MECANICA VIAL AUTOPROPULSADA DE SUCCION",
+  "veces": 1,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "5707",
+  "desc": "CAMION COMPACTADOR DE RESIDUOS DE CARGA FRONTAL",
+  "veces": 1,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "102628",
+  "desc": "REPUESTO Y/O ACCESORIO PARA BARREDORA",
+  "veces": 1,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "5506",
+  "desc": "BARREDORA MECANICA DE CALLE AUTO PROPULSADA DE SUCCION",
+  "veces": 1,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "5909",
+  "desc": "BARREDORA MECANICA AUTOPROPULSADA DE CINTA",
+  "veces": 1,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "77744",
+  "desc": "BARREDORA RECOLECTORA DE ARRASTRE",
+  "veces": 1,
+  "cat": [
+   "vehiculos"
+  ]
+ },
+ {
+  "cod": "12338",
+  "desc": "DISEÑO Y FABRICACION DE CONTENEDOR PARA RESIDUOS",
+  "veces": 1,
+  "cat": [
+   "contenedores"
+  ]
+ },
+ {
+  "cod": "69409",
+  "desc": "REPARACION DE EQUIPO PARA TRATAMIENTO DE RESIDUOS",
+  "veces": 1,
+  "cat": [
+   "tratamiento"
+  ]
+ }
+]
