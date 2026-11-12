@@ -1,0 +1,55 @@
+name: Carga historica
+
+on:
+  workflow_dispatch:
+    inputs:
+      periodo:
+        description: "Años o mes a cargar. Ej: 2018-2025, 2026 o 2026-11"
+        required: true
+        default: "2018-2025"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  historico:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Cargar histórico
+        run: python scripts/historico.py "${{ github.event.inputs.periodo }}"
+      - name: Guardar cambios
+        if: always()
+        run: |
+          git config user.name "monitor-compras"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data data
+          git diff --cached --quiet || git commit -m "Histórico ${{ github.event.inputs.periodo }}"
+          git pull --rebase --autostash
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        if: always()
+        with:
+          path: docs
+
+  publicar:
+    needs: historico
+    if: always()
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4
