@@ -2,7 +2,7 @@
  {
   "cod": "936",
   "desc": "RECOLECCION DE RESIDUOS",
-  "veces": 1866,
+  "veces": 1867,
   "cat": [
    "recoleccion"
   ]
@@ -81,7 +81,7 @@
  {
   "cod": "11847",
   "desc": "RECOLECCION DE RESIDUOS HOSPITALARIOS",
-  "veces": 369,
+  "veces": 370,
   "cat": [
    "especiales"
   ]
@@ -145,7 +145,7 @@
  {
   "cod": "43195",
   "desc": "SERVICIO DE LIMPIEZA DE PUERTOS Y RECOLECCION DE RESIDUOS",
-  "veces": 124,
+  "veces": 125,
   "cat": [
    "recoleccion"
   ]
