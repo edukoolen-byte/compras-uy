@@ -599,6 +599,14 @@
   ]
  },
  {
+  "cod": "78894",
+  "desc": "GESTION DE PLANTA DE COMPOSTAJE",
+  "veces": 4,
+  "cat": [
+   "tratamiento"
+  ]
+ },
+ {
   "cod": "121739",
   "desc": "EJE PARA CONTENEDOR DE RESIDUOS",
   "veces": 4,
@@ -652,14 +660,6 @@
   "veces": 3,
   "cat": [
    "vehiculos"
-  ]
- },
- {
-  "cod": "78894",
-  "desc": "GESTION DE PLANTA DE COMPOSTAJE",
-  "veces": 3,
-  "cat": [
-   "tratamiento"
   ]
  },
  {
