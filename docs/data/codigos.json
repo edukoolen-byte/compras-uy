@@ -113,7 +113,7 @@
  {
   "cod": "39424",
   "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE MEDICAMENTOS",
-  "veces": 187,
+  "veces": 188,
   "cat": [
    "tratamiento"
   ]
@@ -137,7 +137,7 @@
  {
   "cod": "67377",
   "desc": "TRANSPORTE DE RESIDUOS",
-  "veces": 136,
+  "veces": 137,
   "cat": [
    "recoleccion"
   ]
