@@ -479,19 +479,19 @@
   ]
  },
  {
+  "cod": "74315",
+  "desc": "BOMBA TRITURADORA DE RESIDUOS SANITARIOS",
+  "veces": 8,
+  "cat": [
+   "especiales"
+  ]
+ },
+ {
   "cod": "12247",
   "desc": "SISTEMA DE RECOLECCION DE RESIDUOS URBANOS",
   "veces": 8,
   "cat": [
    "recoleccion"
-  ]
- },
- {
-  "cod": "74315",
-  "desc": "BOMBA TRITURADORA DE RESIDUOS SANITARIOS",
-  "veces": 7,
-  "cat": [
-   "especiales"
   ]
  },
  {
