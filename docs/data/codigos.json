@@ -32,7 +32,7 @@
  {
   "cod": "67250",
   "desc": "PALA PARA RESIDUOS",
-  "veces": 1116,
+  "veces": 1117,
   "cat": [
    "otros"
   ]
@@ -89,7 +89,7 @@
  {
   "cod": "8202",
   "desc": "CONTENEDOR DE RESIDUOS DOMICILIARIOS DE 4 RUEDAS",
-  "veces": 308,
+  "veces": 309,
   "cat": [
    "contenedores"
   ]
@@ -97,7 +97,7 @@
  {
   "cod": "8201",
   "desc": "CONTENEDOR PLASTICO DE RESIDUOS DOMICILIARIOS DE 2 RUEDAS",
-  "veces": 297,
+  "veces": 298,
   "cat": [
    "contenedores"
   ]
