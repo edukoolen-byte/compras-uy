@@ -2,7 +2,7 @@
  {
   "cod": "936",
   "desc": "RECOLECCION DE RESIDUOS",
-  "veces": 1872,
+  "veces": 1874,
   "cat": [
    "recoleccion"
   ]
@@ -24,7 +24,7 @@
  {
   "cod": "74594",
   "desc": "RECOLECCION DE RESIDUOS SANITARIOS PELIGROSOS",
-  "veces": 1420,
+  "veces": 1422,
   "cat": [
    "especiales"
   ]
