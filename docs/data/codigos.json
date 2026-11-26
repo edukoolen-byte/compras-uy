@@ -129,7 +129,7 @@
  {
   "cod": "75328",
   "desc": "GESTION DE RESIDUOS SANITARIOS PELIGROSOS",
-  "veces": 140,
+  "veces": 142,
   "cat": [
    "especiales"
   ]
@@ -161,7 +161,7 @@
  {
   "cod": "68287",
   "desc": "SERVICIO DE DESTRUCCION Y DISPOSICION FINAL DE PRODUCTOS QUIMICOS",
-  "veces": 104,
+  "veces": 105,
   "cat": [
    "tratamiento"
   ]
