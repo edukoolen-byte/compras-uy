@@ -295,17 +295,17 @@
   ]
  },
  {
-  "cod": "74023",
-  "desc": "OPERACION DE PLANTA DE TRATAMIENTO DE RESIDUOS",
+  "cod": "79787",
+  "desc": "SERVICIO DE RETIRO Y DISPOSICION FINAL DE BIENES",
   "veces": 24,
   "cat": [
    "tratamiento"
   ]
  },
  {
-  "cod": "79787",
-  "desc": "SERVICIO DE RETIRO Y DISPOSICION FINAL DE MOBILIARIO",
-  "veces": 23,
+  "cod": "74023",
+  "desc": "OPERACION DE PLANTA DE TRATAMIENTO DE RESIDUOS",
+  "veces": 24,
   "cat": [
    "tratamiento"
   ]
